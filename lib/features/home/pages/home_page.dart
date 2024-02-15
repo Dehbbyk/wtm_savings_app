@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:wtm_savings_app/account_view.dart';
-import 'package:wtm_savings_app/home_view.dart';
-import 'package:wtm_savings_app/invest_view.dart';
-import 'package:wtm_savings_app/savings_view.dart';
+import 'package:wtm_savings_app/features/account/pages/account_view.dart';
+import 'package:wtm_savings_app/features/invest/pages/invest_view.dart';
+import 'package:wtm_savings_app/features/savings/pages/savings_view.dart';
+
+import 'home_view.dart';
 
 class HomePage extends StatefulWidget{
 
@@ -22,17 +23,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-        title: Text("WTM Saving App"),
-      ),
-
       body: listOfPages[selectedIndex],
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: (){
-          print("FAB CLICKED");
-        },
-      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
         unselectedItemColor: Colors.indigoAccent,
