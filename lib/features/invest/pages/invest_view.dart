@@ -6,6 +6,6 @@ class InvestView extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Text("Invest");
+    return const Text("Invest");
   }
 }

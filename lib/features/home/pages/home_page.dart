@@ -6,6 +6,8 @@ import 'package:wtm_savings_app/features/savings/pages/savings_view.dart';
 import 'home_view.dart';
 
 class HomePage extends StatefulWidget{
+  const HomePage({super.key});
+
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -13,10 +15,10 @@ class HomePage extends StatefulWidget{
 
 class _HomePageState extends State<HomePage> {
   var listOfPages = [
-    HomeView(),
-    SavingsView(),
-    InvestView(),
-    AccountView(),
+    const HomeView(),
+    const SavingsView(),
+    const InvestView(),
+    const AccountView(),
   ];
   var selectedIndex = 0;
 
@@ -35,7 +37,7 @@ class _HomePageState extends State<HomePage> {
             selectedIndex = value;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: "Home"

@@ -6,6 +6,6 @@ class SavingsView extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Text("Savings");
+    return const Text("Savings");
   }
 }

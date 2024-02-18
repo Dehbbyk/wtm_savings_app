@@ -13,15 +13,15 @@ class SavingDetailsCard extends StatelessWidget {
           color: Colors.blue,
           borderRadius: BorderRadius.circular(16.0)
       ),
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Stack(
         children: [
           ElevatedButton.icon(
             onPressed: (){},
-            icon: Icon(Icons.add),
-            label: Text("Qiuck Save"),
+            icon: const Icon(Icons.add),
+            label: const Text("Qiuck Save"),
             style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: 0,
                   horizontal: 8,
                 ),
@@ -35,24 +35,24 @@ class SavingDetailsCard extends StatelessWidget {
             right: 0,
             child: ElevatedButton(
               onPressed: (){},
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children:[
-                  Text("View Savings"),
-                  Icon(Icons.arrow_forward),
-                ],
-              ),
               style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: 0,
                     horizontal: 8,
                   ),
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white
               ),
+              child: const Row(
+                mainAxisSize: MainAxisSize.min,
+                children:[
+                  Text("View Savings"),
+                  Icon(Icons.arrow_forward),
+                ],
+              ),
             ),
           ),
-          Positioned(
+          const Positioned(
               bottom: 0,
               left: 0,
               child: Column(

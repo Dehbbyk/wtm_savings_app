@@ -6,6 +6,6 @@ class AccountView extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Text("Account Section");
+    return const Text("Account Section");
   }
 }

@@ -8,7 +8,7 @@ class HomeView extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Column(
+        title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -30,7 +30,7 @@ class HomeView extends StatelessWidget{
               IconButton(
                 color: Colors.blue,
                 onPressed: (){},
-                icon: Icon(
+                icon: const Icon(
                   Icons.account_circle,
                   size: 40
                 )
@@ -38,17 +38,32 @@ class HomeView extends StatelessWidget{
         ],
       ),
       body: ListView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         children: [
-          SavingDetailsCard()
+          const SavingDetailsCard(),
+          Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                    "Suggestions for you",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black38
+                  ),
+                ),
+                Image.asset("assets/images/save_for_rent.png")
+              ],
+            ),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        shape: CircleBorder(),
+        shape: const CircleBorder(),
         onPressed: (){
           print("FAB CLICKED");
         },
+        child: const Icon(Icons.add),
       ),
     );
   }
