@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wtm_savings_app/features/home/widgets/money_talks.dart';
+import 'package:wtm_savings_app/features/home/widgets/my_todo_secction.dart';
 import '../widgets/savings_details_card.dart';
+import '../widgets/suggestion_section.dart';
 
 class HomeView extends StatelessWidget{
   const HomeView({super.key});
@@ -38,24 +41,12 @@ class HomeView extends StatelessWidget{
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         children: [
-          const SavingDetailsCard(),
-          Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                    "Suggestions for you",
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.black38
-                  ),
-                ),
-                Image.asset("assets/images/save_for_rent.png")
-              ],
-            ),
-          )
+          SavingDetailsCard(),
+          MyTodoSection(),
+          SuggestionsSection(),
+          MoneyTalks()
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -68,4 +59,5 @@ class HomeView extends StatelessWidget{
     );
   }
 }
+
 
