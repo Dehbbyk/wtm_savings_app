@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wtm_savings_app/features/home/widgets/money_talks.dart';
 import 'package:wtm_savings_app/features/home/widgets/my_todo_secction.dart';
-import 'package:wtm_savings_app/features/home/widgets/vetted_opportunities.dart';
+import 'package:wtm_savings_app/features/home/widgets/top_savings_section.dart';
+import 'package:wtm_savings_app/features/home/widgets/vetted_opportunities_section.dart';
 import '../widgets/savings_details_card.dart';
 import '../widgets/suggestion_section.dart';
 
@@ -46,9 +47,10 @@ class HomeView extends StatelessWidget{
         children: [
           SavingDetailsCard(),
           MyTodoSection(),
+          TopSavingsSection(),
           SuggestionsSection(),
+          VettedOpportunitiesSection(),
           MoneyTalks(),
-          VettedOpportunities()
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -61,5 +63,4 @@ class HomeView extends StatelessWidget{
     );
   }
 }
-
 

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class MoneyTalks extends StatelessWidget {
-  const MoneyTalks({
+class VettedOpportunitiesSection extends StatelessWidget {
+  const VettedOpportunitiesSection({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
+      padding: EdgeInsets.symmetric(vertical: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -15,7 +17,7 @@ class MoneyTalks extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Money Talks",
+                "Vetted Opportunities",
                 style: TextStyle(
                     fontSize: 16,
                     color: Colors.black38
@@ -26,30 +28,36 @@ class MoneyTalks extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        "View Blog",
-                        style: TextStyle(color: Colors.black),
+                        "Find More",
+                        style: TextStyle(color: Colors.deepPurpleAccent),
                       ),
                       Icon(
                           Icons.arrow_forward_ios,
-                        size: 16,
-                        color: Colors.black,
+                        size: 18,
+                        color: Colors.deepPurpleAccent,
                       )
                     ],
                   )
               ),
             ],
           ),
+          //listview start
           SizedBox(
             height: 200,
             child: ListView(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                children: [
-                  Image.asset('assets/images/money_talk.png'),
-                  Image.asset('assets/images/image_1.png'),
-                  Image.asset('assets/images/image_2.png'),
-                  Image.asset('assets/images/image_3.png'),
-                  Image.asset('assets/images/image_4.png')
+                children:[
+                  Image.asset('assets/images/image_11.png'),
+                  Image.asset('assets/images/image_12.png'),
+                  Image.asset('assets/images/image_13.png'),
+                  Image.asset('assets/images/image_14.png'),
+                  Image.asset('assets/images/image_5.png'),
+                  Image.asset('assets/images/image_6.png'),
+                  Image.asset('assets/images/image_7.png'),
+                  Image.asset('assets/images/image_8.png'),
+                  Image.asset('assets/images/image_9.png'),
+                  Image.asset('assets/images/image_10.png'),
                 ]
             ),
           )

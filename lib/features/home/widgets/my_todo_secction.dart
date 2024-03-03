@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:wtm_savings_app/features/home/widgets/add_address_item.dart';
+import 'package:wtm_savings_app/features/home/widgets/add_bvn_item.dart';
+import 'package:wtm_savings_app/features/home/widgets/add_face_item.dart';
+import 'package:wtm_savings_app/features/home/widgets/add_picture_item.dart';
+import 'package:wtm_savings_app/features/home/widgets/auto_save_item.dart';
+import 'package:wtm_savings_app/features/home/widgets/my_todo_item.dart';
+import 'package:wtm_savings_app/features/home/widgets/very_identity_item.dart';
 
 class MyTodoSection extends StatelessWidget {
   const MyTodoSection({
@@ -49,35 +56,13 @@ class MyTodoSection extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                Container(
-                  padding: EdgeInsets.all(16),
-                  width: 140,
-                  color: Colors.white,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                          "Add Debit Card",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16
-                        ),
-                      ),
-                      LinearProgressIndicator(
-                        value: 0.3,
-                      ),
-                      IconButton(
-                          onPressed: (){},
-                          icon: Icon(Icons.arrow_forward_ios),
-                        style: IconButton.styleFrom(
-                          backgroundColor: Colors.grey.shade300,
-                          maximumSize: Size(40,40)
-                        ),
-                      ),
-                    ],
-                  ),
-                )
+                MyTodoItem(),
+                AutoSaveItem(),
+                FaceIDItem(),
+                AddPictureItem(),
+                AddBVNItem(),
+                VerifyIdentityItem(),
+                AddAddressItem()
               ],
             ),
           )
