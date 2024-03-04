@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wtm_savings_app/features/home/widgets/add_address_item.dart';
-import 'package:wtm_savings_app/features/home/widgets/add_bvn_item.dart';
-import 'package:wtm_savings_app/features/home/widgets/add_face_item.dart';
-import 'package:wtm_savings_app/features/home/widgets/add_picture_item.dart';
-import 'package:wtm_savings_app/features/home/widgets/auto_save_item.dart';
 import 'package:wtm_savings_app/features/home/widgets/my_todo_item.dart';
-import 'package:wtm_savings_app/features/home/widgets/very_identity_item.dart';
 
 class MyTodoSection extends StatelessWidget {
   const MyTodoSection({
@@ -56,13 +50,38 @@ class MyTodoSection extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                MyTodoItem(),
-                AutoSaveItem(),
-                FaceIDItem(),
-                AddPictureItem(),
-                AddBVNItem(),
-                VerifyIdentityItem(),
-                AddAddressItem()
+                MyTodoItem(
+                  title:"Add Debit Card",
+                  progress: 0.3,
+                  onPressed: (){},
+                ),
+                MyTodoItem(
+                  title: "Enable Autosave",
+                  progress: 0.9,
+                ),
+                MyTodoItem(
+                  title: "Enable Face ID/fingerprint",
+                  progress: 0,
+                  onPressed: (){},
+                ),
+                MyTodoItem(
+                    title:"Add a Picture",
+                    progress: 0,
+                  onPressed: (){},
+                ),
+                MyTodoItem(
+                    title: "Add your BVN",
+                    progress: 0.3,
+                ),
+                MyTodoItem(
+                  title: "Verify Identity",
+                  progress:0,
+                  onPressed: (){},
+                ),
+                MyTodoItem(
+                  title: "Add Address",
+                  progress: 0.3,
+                )
               ],
             ),
           )

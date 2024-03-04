@@ -45,6 +45,8 @@ class MoneyTalks extends StatelessWidget {
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 children: [
+                  Image.asset('assets/images/moneyy_talk.png'),
+                  Image.asset('assets/images/moneyyy_talk.png'),
                   Image.asset('assets/images/money_talk.png'),
                   Image.asset('assets/images/image_1.png'),
                   Image.asset('assets/images/image_2.png'),

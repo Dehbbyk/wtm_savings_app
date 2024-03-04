@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 class MyTodoItem extends StatelessWidget {
   const MyTodoItem({
     super.key,
+    required this.title,
+    required this.progress,
+    this.onPressed,
   });
+
+  final String title;
+  final double progress;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -11,23 +18,26 @@ class MyTodoItem extends StatelessWidget {
       padding: EdgeInsets.all(16),
       margin: EdgeInsets.only(right: 10),
       width: 140,
-      color: Colors.white,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: Colors.white
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Add Debit Card",
+            title,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16
             ),
           ),
           LinearProgressIndicator(
-            value: 0.3,
+            value: progress,
           ),
           IconButton(
-            onPressed: (){},
+            onPressed: onPressed,
             icon: Icon(Icons.arrow_forward_ios),
             style: IconButton.styleFrom(
                 backgroundColor: Colors.grey.shade300,

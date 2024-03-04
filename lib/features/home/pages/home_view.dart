@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wtm_savings_app/features/home/widgets/grown_ups.dart';
 import 'package:wtm_savings_app/features/home/widgets/money_talks.dart';
 import 'package:wtm_savings_app/features/home/widgets/my_todo_secction.dart';
 import 'package:wtm_savings_app/features/home/widgets/top_savings_section.dart';
@@ -51,6 +52,7 @@ class HomeView extends StatelessWidget{
           SuggestionsSection(),
           VettedOpportunitiesSection(),
           MoneyTalks(),
+          GrownUps()
         ],
       ),
       floatingActionButton: FloatingActionButton(
