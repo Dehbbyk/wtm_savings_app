@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 
 class SavingDetailsCard extends StatelessWidget {
   const SavingDetailsCard({
-    super.key,
+    super.key, required this.topRightWidget, required this.balance,
   });
+
+  final Widget topRightWidget;
+  final String balance;
 
   @override
   Widget build(BuildContext context) {
@@ -13,15 +16,15 @@ class SavingDetailsCard extends StatelessWidget {
           color: Colors.blue,
           borderRadius: BorderRadius.circular(16.0)
       ),
-      padding: const EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(16.0),
       child: Stack(
         children: [
           ElevatedButton.icon(
             onPressed: (){},
-            icon: const Icon(Icons.add),
-            label: const Text("Qiuck Save"),
+            icon: Icon(Icons.add),
+            label: Text("Qiuck Save"),
             style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(
+                padding: EdgeInsets.symmetric(
                   vertical: 0,
                   horizontal: 8,
                 ),
@@ -33,40 +36,24 @@ class SavingDetailsCard extends StatelessWidget {
           Positioned(
             top: 0,
             right: 0,
-            child: ElevatedButton(
-              onPressed: (){},
-              style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 0,
-                    horizontal: 8,
-                  ),
-                  backgroundColor: Colors.black,
-                  foregroundColor: Colors.white
-              ),
-              child: const Row(
-                mainAxisSize: MainAxisSize.min,
-                children:[
-                  Text("View Savings"),
-                  Icon(Icons.arrow_forward),
-                ],
-              ),
-            ),
+            child:topRightWidget
           ),
-          const Positioned(
+          Positioned(
               bottom: 0,
               left: 0,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("My savings"),
                   Text(
-                      "****",
+                      balance,
                       style: TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 28
                       )
                   ),
                 ],
-              )
+              ),
           )
         ],
       ),

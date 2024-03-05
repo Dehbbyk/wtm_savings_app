@@ -14,7 +14,7 @@ class HomeView extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: const Column(
+        title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -36,7 +36,7 @@ class HomeView extends StatelessWidget{
               IconButton(
                 color: Colors.blue,
                 onPressed: (){},
-                icon: const Icon(
+                icon: Icon(
                   Icons.account_circle,
                   size: 40
                 )
@@ -46,7 +46,27 @@ class HomeView extends StatelessWidget{
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
-          SavingDetailsCard(),
+          SavingDetailsCard(
+            balance: "\$20000",
+            topRightWidget:  ElevatedButton(
+              onPressed: (){},
+              style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 0,
+                    horizontal: 8,
+                  ),
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children:[
+                  Text("View Savings"),
+                  Icon(Icons.arrow_forward),
+                ],
+              ),
+            ),
+          ),
           MyTodoSection(),
           TopSavingsSection(),
           SuggestionsSection(),
@@ -56,11 +76,11 @@ class HomeView extends StatelessWidget{
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        shape: const CircleBorder(),
+        shape: CircleBorder(),
         onPressed: (){
           print("FAB CLICKED");
         },
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }
