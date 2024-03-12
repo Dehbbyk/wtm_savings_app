@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wtm_savings_app/features/home/widgets/my_todo_secction.dart';
+import 'package:wtm_savings_app/features/savings/widgets/strict_savings_items.dart';
 
 class StrictSavingsSection extends StatelessWidget {
   const StrictSavingsSection({super.key});
@@ -27,61 +28,39 @@ class StrictSavingsSection extends StatelessWidget {
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
                 children: [
-                  StrictSavingItem(),
-                  StrictSavingItem(),
-                  StrictSavingItem(),
+                  StrictSavingItem(
+                    title: "PiggyBank",
+                    subtitle: "Automatic daily, weekly amd monthly withdrawal",
+                    color: Colors.blue,
+                    TextButton: 'SETUP', 
+                    backgroundColor: Colors.blue.shade200,
+                  ),
+                  StrictSavingItem(
+                      TextButton: "LOCK MONEY",
+                      title: "SafeLock",
+                      subtitle: "Lock funds to avoid temptation",
+                      color: Colors.blue.shade200,
+                    backgroundColor: Colors.blue.shade100,
+                  ),
+                  StrictSavingItem(
+                      TextButton: "NEW GOAL",
+                      title: "Target Savings",
+                      subtitle: "Smash your saving goals faster",
+                      color: Colors.green,
+                    backgroundColor: Colors.green.shade200,
+                  ),
+                  StrictSavingItem(
+                      TextButton: "ADD MONEY",
+                      title: "HouseMoney",
+                      subtitle: "Save for your housing",
+                      color: Colors.deepOrange,
+                    backgroundColor: Colors.orange,
+                  )
                 ]
               ),
             )
           ],
         )
-    );
-  }
-}
-
-class StrictSavingItem extends StatelessWidget {
-  const StrictSavingItem({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 110,
-      width: 130,
-      decoration: BoxDecoration(
-        color: Colors.blue.shade50,
-        borderRadius: BorderRadius.circular(8)
-      ),
-      padding: EdgeInsets.all(8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-         Row(
-           mainAxisAlignment: MainAxisAlignment.end,
-           children: [
-             ElevatedButton(
-                     onPressed: (){},
-                     child:Text("SETUP")
-                 ),
-           ],
-         ),
-          Text(
-              "PiggyBank",
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.blue.shade800
-            ),
-          ),
-          Text(
-              "Automatic daily, weekly and monthly savings",
-            style: TextStyle(
-                fontWeight: FontWeight.bold
-            ),
-          ),
-        ]
-      )
     );
   }
 }
