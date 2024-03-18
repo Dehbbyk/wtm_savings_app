@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wtm_savings_app/features/account/widgets/account_grid.dart';
-import 'package:wtm_savings_app/features/account/widgets/account_setting_item.dart';
 import 'package:wtm_savings_app/features/account/widgets/account_settings_1.dart';
 import 'package:wtm_savings_app/features/account/widgets/account_settings_2.dart';
 import 'package:wtm_savings_app/features/account/widgets/account_toggle.dart';

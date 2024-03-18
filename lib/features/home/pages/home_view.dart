@@ -12,6 +12,7 @@ class HomeView extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+    print("Home view rebuild");
     return Scaffold(
       appBar: AppBar(
         title: Column(
@@ -50,6 +51,13 @@ class HomeView extends StatelessWidget{
             balance: "\$20000",
             topRightWidget:  ElevatedButton(
               onPressed: (){},
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children:[
+                  Text("View Savings"),
+                  Icon(Icons.arrow_forward),
+                ],
+              ),
               style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(
                     vertical: 0,
@@ -57,13 +65,6 @@ class HomeView extends StatelessWidget{
                   ),
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children:[
-                  Text("View Savings"),
-                  Icon(Icons.arrow_forward),
-                ],
               ),
             ),
           ),
