@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ExploreInvestmentItem extends StatelessWidget {
-  const ExploreInvestmentItem({
+class ExploreInvestmentItem3 extends StatelessWidget {
+  const ExploreInvestmentItem3({
     super.key,
   });
 
@@ -13,7 +13,7 @@ class ExploreInvestmentItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
-              "assets/images/image_3.png",
+              "assets/images/image_6.png",
               height: 120,
               width: 120,
             ),
@@ -22,7 +22,7 @@ class ExploreInvestmentItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "CORPORATE DEBT NOTES SERIES XXI",
+                    "16 Units of High Yield Luxury 2 Bed Ap...",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16
@@ -30,7 +30,7 @@ class ExploreInvestmentItem extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "10% returns in 9 months",
+                    "30% p.a expected returns",
                     style: TextStyle(
                         color: Colors.teal
                     ),
@@ -43,13 +43,13 @@ class ExploreInvestmentItem extends StatelessWidget {
                         crossAxisAlignment:CrossAxisAlignment.start ,
                         children: [
                           Text(
-                            "\$5,000",
+                            "\$10,000",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold
                             ),
                           ),
                           Text(
-                            "per unit",
+                            "per share",
                             style: TextStyle(
                                 color: Colors.black38
                             ),
@@ -60,7 +60,7 @@ class ExploreInvestmentItem extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "625",
+                            "8134",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold
                             ),
@@ -86,9 +86,9 @@ class ExploreInvestmentItem extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      "Sold Out",
+                      "Invest Now",
                       style: TextStyle(
-                          color: Colors.red.shade700
+                          color: Colors.green
                       ),
                     ),
                   ],

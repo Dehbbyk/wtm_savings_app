@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ExploreInvestmentItem extends StatelessWidget {
-  const ExploreInvestmentItem({
+class ExploreInvestmentItem4 extends StatelessWidget {
+  const ExploreInvestmentItem4({
     super.key,
   });
 
@@ -13,7 +13,7 @@ class ExploreInvestmentItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
-              "assets/images/image_3.png",
+              "assets/images/image_7.png",
               height: 120,
               width: 120,
             ),
@@ -22,7 +22,7 @@ class ExploreInvestmentItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "CORPORATE DEBT NOTES SERIES XXI",
+                    "CORPORATE DEBT NOTES SERIES XIX",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16
@@ -30,7 +30,7 @@ class ExploreInvestmentItem extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "10% returns in 9 months",
+                    "12.3% returns in 9 months",
                     style: TextStyle(
                         color: Colors.teal
                     ),
@@ -60,7 +60,7 @@ class ExploreInvestmentItem extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "625",
+                            "1450",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold
                             ),
