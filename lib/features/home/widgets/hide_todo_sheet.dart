@@ -34,6 +34,7 @@ class HideTodoSheet extends StatelessWidget {
           ),
           ElevatedButton(
               onPressed: (){
+                Navigator.pop(context);
                 showDialog(
                     context: context,
                     builder: (context) {
@@ -41,13 +42,17 @@ class HideTodoSheet extends StatelessWidget {
                         title: Text("Remind me later"),
                         content: Text("Are you sure you want to hide your to-do list till tomorrow?"),
                         actions: [
-                          ElevatedButton(
-                              onPressed: (){},
+                          TextButton(
+                              onPressed: (){
+                                Navigator.pop(context);
+                              },
                               child: Text("YES, REMOVE IT"),
                           ),
 
-                          ElevatedButton(
-                            onPressed: (){},
+                          TextButton(
+                            onPressed:(){
+                              Navigator.pop(context);
+                            },
                             child: Text("CLOSE"),
                           ),
                         ],
