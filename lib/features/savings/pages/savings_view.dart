@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wtm_savings_app/features/home/widgets/savings_details_card.dart';
+import 'package:wtm_savings_app/features/savings/pages/QuickSavePage.dart';
 import 'package:wtm_savings_app/features/savings/widgets/flexible_savings_section.dart';
 import 'package:wtm_savings_app/features/savings/widgets/strict_savings_section.dart';
 
@@ -32,6 +33,13 @@ class SavingsView extends StatelessWidget{
                 backgroundColor: Colors.black,
                 shape: StadiumBorder(),
               ),
+            onClick: (){
+              Navigator.push(
+                context,MaterialPageRoute(builder: (context){
+                  return QuickSavePage();
+                }),
+              );
+            },
           ),
           StrictSavingsSection(),
           FlexibleSavingsSection()
