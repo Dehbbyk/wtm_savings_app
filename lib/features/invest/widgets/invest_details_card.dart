@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wtm_savings_app/features/utils.dart';
 
 class InvestDetailCard extends StatelessWidget {
   const InvestDetailCard({super.key});
@@ -26,7 +27,7 @@ class InvestDetailCard extends StatelessWidget {
             style: TextStyle(color: Colors.white54),
           ),
           Text(
-              "NGN 0",
+              " ${(getNaira())}0",
             style: TextStyle(color: Colors.white),
           ),
         ],

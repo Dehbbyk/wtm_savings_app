@@ -24,7 +24,7 @@ class SavingsView extends StatelessWidget{
         padding: EdgeInsets.all(16),
         children: [
           SavingDetailsCard(
-            balance: "\$24000",
+            balance: "24000",
               topRightWidget: Chip(
                   label: Text(
                       "Up to 13% returns",
